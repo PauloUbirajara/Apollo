@@ -12,7 +12,7 @@ const config: { [key: string]: Knex.Config } = {
       database: env['DB_NAME'],
       user: env['DB_USER'],
       password: env['DB_PASSWORD'],
-      port: Number.parseInt(env['DB_PORT']),
+      // port: Number.parseInt(env['DB_PORT']),
       host: env['DB_HOST']
     },
     pool: {
