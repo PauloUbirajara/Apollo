@@ -1,1 +1,1 @@
-worker: cd backend; npm run dev
+worker: npm run dev
