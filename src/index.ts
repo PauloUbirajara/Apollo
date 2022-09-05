@@ -14,6 +14,7 @@ databaseService
     console.log('Banco de dados conectado com sucesso');
 
     const app = express();
+    const host = process.env.DB_HOST || 'localhost';
     const port = process.env.PORT || 3001;
 
     app.use(cors());
@@ -25,8 +26,8 @@ databaseService
     app.use('/reviews', reviewRouter);
     app.use('/schedulings', schedulingRouter);
 
-    app.listen(port, () => {
-      console.log(`Servidor disponível em http://localhost:${port}`);
+    app.listen(`http://${host}:${port}`, () => {
+      console.log(`Servidor disponível em http://${host}:${port}`);
     });
   })
   .catch((err) => {
