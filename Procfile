@@ -1,1 +1,1 @@
-worker: npm run build; node build/src/index.js
+worker: node src/index.js
