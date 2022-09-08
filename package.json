@@ -6,7 +6,6 @@
   "scripts": {
     "test": "jest",
     "dev": "ts-node-dev --require dotenv/config --respawn src/index.ts",
-    "start": "node build/src/index.js",
     "build": "tsc",
     "migrate:make": "knex --knexfile knexfile.ts migrate:make -x ts --",
     "migrate:up": "knex --knexfile knexfile.ts migrate:latest",
